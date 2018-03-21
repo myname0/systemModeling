@@ -14,19 +14,15 @@ public class Task2 {
 
     private double xn;
     private double yn;
-    private double x = 1;
-    private double y = 1;
-
-    private List<Double> pointsX = new ArrayList<Double>();
-    private List<Double> pointsY = new ArrayList<Double>();
-
 
     private void countPoints(double c, List<Double> pointsX, List<Double> pointsY) {
         double k = 0;
+        double x = 1;
+        double y = 1;
         while (k < count) {
             k += h;
             xn = x + h * y;
-            yn = y + h * countFunction(c, x);
+            yn = y + h * countFunction(c, x, y);
             pointsX.add(x);
             pointsY.add(y);
             x = xn;
@@ -34,7 +30,7 @@ public class Task2 {
         }
     }
 
-    private double countFunction(double c, double x) {
+    private double countFunction(double c, double x, double y) {
         return -(g / l) * Math.sin(x) - (c * y) / (l * m);
     }
 
