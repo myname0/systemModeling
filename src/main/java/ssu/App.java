@@ -3,6 +3,8 @@ package ssu;
 
 import javafx.util.Pair;
 import ssu.tasks.*;
+import ssu.tasks.queuing_network.task6.Service;
+import ssu.tasks.queuing_network.task7.QNService;
 
 import java.util.List;
 
@@ -12,7 +14,9 @@ public class App {
         //executeTask2();
         //executeTask3();
         //executeTask4();
-        executeTask5();
+       //executeTask5();
+        executeTask6();
+        //executeTask7();
     }
 
     public static void executeTask1() {
@@ -51,5 +55,15 @@ public class App {
     public static void executeTask5() {
         Task5 task5 = new Task5();
         task5.execute();
+    }
+
+    public static void executeTask6(){
+        Service service = new Service();
+        service.run();
+    }
+
+    public static void executeTask7(){
+        QNService service = new QNService();
+        service.run();
     }
 }

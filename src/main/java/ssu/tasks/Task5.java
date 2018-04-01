@@ -7,7 +7,7 @@ import java.util.Random;
 public class Task5 {
     public void execute() {
         Random random = new Random();
-        double constant = -1.00 / 15.00;
+        double constant = -15.00;
         double X;
         double sum = 0.00;
         List<Double> listX;
